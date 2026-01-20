@@ -12,8 +12,27 @@
 // }
 
 
+function continueGame(){
+    //step-1 genarate a random alphabet
+    // const alphabet = getRandomAlphabet()
+    const alphabet = getARandomAlphabet()
+
+
+    console.log('your random alphabet', alphabet);
+
+    //set radomly genarated alphabet to the screen (show it)
+    const currentAlphabetElement = document.getElementById('current-alphabet');
+    currentAlphabetElement.innerText = alphabet;
+
+    //set background colour
+    // setBackgroundColorById(alphabet);
+    addBackgroundColorById(alphabet);
+
+}
+
 function play(){
     hideElementById('home-screen');
-    showElementById('play-ground')
+    showElementById('play-ground');
+    continueGame()
 }
 
