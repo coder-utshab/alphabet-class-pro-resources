@@ -40,6 +40,16 @@ if(playerPressed == expectedAlphabet){
 }
 else{
     console.log('dhurr vaiyaa va apu...right key press koro')
+    //step 1 : get the current life number
+     const currentLifeElement = document.getElementById('current-life');
+     const currentLifeText = currentLifeElement.innerText;
+     const currentLife = parseInt(currentLifeText);
+
+    //step 2: reduce the life count
+     const newLife = currentLife - 1;
+
+    //step 3: display the updatedd life count
+    currentLifeElement.innerText = newLife;
 }
 
 }
