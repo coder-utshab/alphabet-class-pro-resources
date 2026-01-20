@@ -19,8 +19,10 @@ function getARandomAlphabet(){
     const alphabetString = 'abcdefghijklmnopqrstuvwxyz';
     const alphabets = alphabetString.split('');
 
-    const randomNumber = Math.random()*25;
-    const index = Math.round(randomNumber);
+    // const randomNumber = Math.random()*25;
+    // const index = Math.round(randomNumber);
+    const index = Math.floor(Math.random() * alphabets.length);
+
 
     const alphabet = alphabets[index];
     return alphabet;

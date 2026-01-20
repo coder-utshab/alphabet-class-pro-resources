@@ -12,9 +12,30 @@
 // }
 
 
+function handleKeyboardKeyUpEvent(event){
+    // const playerPressed = event.key;
+    const playerPressed = event.key.toLowerCase();
+
+
+    //get player is expected to press
+    const currentAlphabetElement = document.getElementById('current-alphabet');
+    const currentAlphabet = currentAlphabetElement.innerText;
+    const expectedAlphabet = currentAlphabet.toLowerCase();
+
+    // check right or wrong key press
+    if(playerPressed == expectedAlphabet){
+        console.log('you get a point');
+        continueGame();
+    }
+    else{
+        console.log('durr vaiya va apu ... right key press  koro')
+    }
+}
+
+document.addEventListener('keyup', handleKeyboardKeyUpEvent);
+
 function continueGame(){
     //step-1 genarate a random alphabet
-    // const alphabet = getRandomAlphabet()
     const alphabet = getARandomAlphabet()
 
 
