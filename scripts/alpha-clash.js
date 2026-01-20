@@ -10,35 +10,36 @@
 // // console.log(playgroundSection.classList)
 
 // }
-
-
 function handleKeyboardKeyUpEvent(event){
-    // const playerPressed = event.key;
-    const playerPressed = event.key.toLowerCase();
+    const playerPressed =event.key;
+    console.log('player pressed',playerPressed);
 
-
-    //get player is expected to press
+    //get the expected to press
     const currentAlphabetElement = document.getElementById('current-alphabet');
     const currentAlphabet = currentAlphabetElement.innerText;
     const expectedAlphabet = currentAlphabet.toLowerCase();
+    console.log(playerPressed,expectedAlphabet);
 
-    // check right or wrong key press
-    if(playerPressed == expectedAlphabet){
-        console.log('you get a point');
-        console.log('you have passed correctly', expectedAlphabet);
-        removeBackgroundColorById(expectedAlphabet);
-        continueGame();
+
+    //check matched or not
+    if(playerPressed === expectedAlphabet){
+      console.log('You get a point');  
     }
     else{
-        console.log('durr vaiya va apu ... right key press  koro')
+        
     }
+ 
+
+
+
 }
 
+document.addEventListener('keyup', handleKeyboardKeyUpEvent);
 
 function continueGame(){
     //step-1 genarate a random alphabet
     const alphabet = getARandomAlphabet();
-    // console.log('your random alphabet', alphabet);
+    console.log('your random alphabet', alphabet);
 
     //set radomly genarated alphabet to the screen (show it)
     const currentAlphabetElement = document.getElementById('current-alphabet');
