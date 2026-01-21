@@ -54,6 +54,7 @@ setTextElementValueById('current-score', updatedScore);
 else{
     console.log('dhurr vaiyaa va apu...right key press koro')
 <<<<<<< HEAD
+<<<<<<< HEAD
     //step 1 : get the current life number
     //  const currentLifeElement = document.getElementById('current-life');
     //  const currentLifeText = currentLifeElement.innerText;
@@ -66,6 +67,8 @@ else{
     // currentLifeElement.innerText = newLife;
    }
 =======
+=======
+>>>>>>> parent of 1596b4c (up)
 }
 >>>>>>> parent of 1596b4c (up)
 
