@@ -12,6 +12,13 @@
 // }
 function handleKeyboardKeyUpEvent(event){
     const playerPressed = event.key;
+    console.log('player pressed', playerPressed);
+
+
+    //stop the game if pressed 'Esc'
+    if(playerPressed === 'Escaped'){
+        gameOver();
+    }
 
     // key player is expected to press
    const currentAlphabetElement = document.getElementById('current-alphabet');
@@ -84,7 +91,6 @@ function continueGame(){
     currentAlphabetElement.innerText = alphabet;
 
     //set background colour
-    // setBackgroundColorById(alphabet);
     addBackgroundColorById(alphabet);
 
 }
@@ -111,5 +117,11 @@ function gameOver(){
     const lastScore = getTextElementValueById('current-score');
     console.log(lastScore);
     setTextElementValueById('last-score', lastScore);
+
+    //clear the last alphabet heilight
+    const currentAlphabet = getElementTextById('current-alphabet');
+    // console.log(currentAlphabet);
+    removeBackgroundColorById(currentAlphabet);
+
 }
 
