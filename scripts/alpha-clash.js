@@ -21,18 +21,27 @@ function handleKeyboardKeyUpEvent(event){
 //    check right or wrong key pressed
 if(playerPressed == expectedAlphabet){
     console.log('you got a point!');
+
+    const currentScore = getTextElementValueById('current-score');
+    console.log(currentScore);
+    const updatedScore = currentScore + 1;
+
+
     //update score
     //1. get the current score
-    const currentScoreElement = document.getElementById('current-score');
-    const currentScoreText = currentScoreElement.innerText;
-    const currentScore = parseInt(currentScoreText);
-    console.log(currentScoreText);
+    // const currentScoreElement = document.getElementById('current-score');
+    // const currentScoreText = currentScoreElement.innerText;
+    // const currentScore = parseInt(currentScoreText);
+    // console.log(currentScore);
+    // const currentScore = getTextElementValueById('current-score');
+
+
 
     //2. increse by the score by 1
     const newScore = currentScore + 1;
 
     //3. show the updated score
-    currentScoreElement.innerText = newScore;
+    // currentScoreElement.innerText = newScore;
 
     //start a new round
     removeBackgroundColorById(expectedAlphabet)
@@ -42,14 +51,14 @@ else{
     console.log('dhurr vaiyaa va apu...right key press koro');
     //strep-1: get the current Life number
 
-    const currentLifeElement = document.getElementById('current-life');
-    const currentLifeText = currentLifeElement.innerText;
-    const currentLife = parseInt(currentLifeText);
-    //step-2: reduce the life count
-    const newLife = currentLife - 1;
-    // step-3: display the updated life count
-    currentLifeElement.innerText = newLife;
-    
+    // const currentLifeElement = document.getElementById('current-life');
+    // const currentLifeText = currentLifeElement.innerText;
+    // const currentLife = parseInt(currentLifeText);
+    // //step-2: reduce the life count
+    // const newLife = currentLife - 1;
+    // // step-3: display the updated life count
+    // currentLifeElement.innerText = newLife;
+
 }
 
 }
