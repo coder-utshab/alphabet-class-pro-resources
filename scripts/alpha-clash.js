@@ -39,7 +39,17 @@ if(playerPressed == expectedAlphabet){
     continueGame();
 }
 else{
-    console.log('dhurr vaiyaa va apu...right key press koro')
+    console.log('dhurr vaiyaa va apu...right key press koro');
+    //strep-1: get the current Life number
+
+    const currentLifeElement = document.getElementById('current-life');
+    const currentLifeText = currentLifeElement.innerText;
+    const currentLife = parseInt(currentLifeText);
+    //step-2: reduce the life count
+    const newLife = currentLife - 1;
+    // step-3: display the updated life count
+    currentLifeElement.innerText = newLife;
+    
 }
 
 }
