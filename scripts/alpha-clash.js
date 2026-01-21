@@ -23,8 +23,8 @@ if(playerPressed == expectedAlphabet){
     console.log('you got a point!');
 
     const currentScore = getTextElementValueById('current-score');
-    console.log(currentScore);
     const updatedScore = currentScore + 1;
+    setTextElementValueById('current-score', updatedScore);
 
 
     //update score
@@ -49,8 +49,15 @@ if(playerPressed == expectedAlphabet){
 }
 else{
     console.log('dhurr vaiyaa va apu...right key press koro');
-    //strep-1: get the current Life number
 
+const currentLife = getTextElementValueById('current-life');
+const updatedLife = currentLife - 1;
+setTextElementValueById('current-life', updatedLife);
+
+
+
+    //------------------------------------------------------
+    //step-1: get the current Life number
     // const currentLifeElement = document.getElementById('current-life');
     // const currentLifeText = currentLifeElement.innerText;
     // const currentLife = parseInt(currentLifeText);

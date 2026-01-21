@@ -26,10 +26,10 @@ function getTextElementValueById(elementId){
     return value;
 }
 
-// function setTextElementValueById(elementId, value){
-//     const element = document.getElementById(elementId);
-//     element.innerText = value;
-// }
+function setTextElementValueById(elementId, value){
+    const element = document.getElementById(elementId);
+    element.innerText = value;
+}
 
 
 function getARandomAlphabet(){
