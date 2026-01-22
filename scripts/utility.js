@@ -51,6 +51,14 @@ function getARandomAlphabet(){
     return alphabet;
 }
 
+
+
+
+
+
+
+
+
 // function getRandomAlphabet(){
 //     //get or create an alphabet array
 //     const alphabetString = 'abcdefghijklmnopqrstuvwxyz';
